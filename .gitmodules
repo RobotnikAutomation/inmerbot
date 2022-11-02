@@ -4,3 +4,6 @@
 [submodule "rbvogui_common"]
 	path = rbvogui_common
 	url = https://github.com/RobotnikAutomation/rbvogui_common
+[submodule "robotnik_sensors"]
+	path = robotnik_sensors
+	url = https://github.com/RobotnikAutomation/robotnik_sensors
