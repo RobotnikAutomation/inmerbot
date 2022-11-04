@@ -7,3 +7,24 @@
 [submodule "robotnik_sensors"]
 	path = robotnik_sensors
 	url = https://github.com/RobotnikAutomation/robotnik_sensors
+[submodule "robotnik_msgs"]
+	path = robotnik_msgs
+	url = https://github.com/RobotnikAutomation/robotnik_msgs
+[submodule "robotnik_pad"]
+	path = robotnik_pad
+	url = https://github.com/RobotnikAutomation/robotnik_pad
+[submodule "rcomponent"]
+	path = rcomponent
+	url = https://github.com/RobotnikAutomation/rcomponent
+[submodule "joint_read_command_controller"]
+	path = joint_read_command_controller
+	url = https://github.com/RobotnikAutomation/joint_read_command_controller
+[submodule "teleop_panel"]
+	path = teleop_panel
+	url = https://github.com/RobotnikAutomation/teleop_panel
+[submodule "velodyne_simulator"]
+	path = velodyne_simulator
+	url = https://github.com/RobotnikAutomation/velodyne_simulator
+[submodule "map2gazebo"]
+	path = map2gazebo
+	url = https://github.com/shilohc/map2gazebo
