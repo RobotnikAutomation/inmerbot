@@ -3,8 +3,8 @@
 Packages for the simulation of the RB-Vogui
 
 <p align="center">
-  <img src="rbvogui_sim/doc/rbvogui_base.png" height="275" />
-  <img src="rbvogui_sim/doc/rbvogui_one_arm.png" height="275" />
+  <img src="doc/rbvogui_base.png" height="275" />
+  <img src="doc/rbvogui_one_arm.png" height="275" />
 </p>
 
 ## Paquetes
@@ -58,6 +58,7 @@ Creamos un nuevo ws:
 ```bash
 mkdir catkin_ws #Desde la carpeta que se quiera creamos el espacio de trabajo, como estándar catkin_ws
 cd catkin_ws
+mkdir src && cd src
 ```
 
 Instalamos la versión estable del repositorio. Este repositorio se gestiona por medio de ramas. La rama principal, main, se considera la rama limpia y estable. Para nuevos desarrollos crearemos una nueva rama y realizaremos una pull request a la rama principal cuando hayamos terminado y comprobado los desarrollos.
@@ -65,22 +66,21 @@ Instalamos la versión estable del repositorio. Este repositorio se gestiona por
 **Instalamos la versión estable:**
 
 ```bash
-vcs import --input https://raw.githubusercontent.com/RobotnikAutomation/inmerbot/main/repos/inmerbot.repos
+git clone https://github.com/RobotnikAutomation/inmerbot --recurse-submodules
+cd ..   #En directorio catkin_ws
 rosdep install --from-paths src --ignore-src -y
 ``` 
 
 ### 3) Instalamos los paquetes propietarios de Robotnik, entre ellos: controladores, robotnik_msgs y rcomponent:
 
-
-```bash
-cd ~/catkin_ws
+```bash 
 sudo dpkg -i src/inmerbot/rbvogui_common/libraries/*
 ```
 
 ### 4) Compilamos:
 
 ```bash
-cd ~/catkin_ws
+source /opt/ros/melodic/setup.bash
 catkin build
 source devel/setup.bash
 ```
@@ -100,7 +100,7 @@ Para lanzar el rbvogui con el manipulador UR deberemos lanzar en terminal la sig
 ```
 
 <p align="center">
-  <img src="rbvogui_sim/doc/rbvogui_one_arm.png" height="275" />
+  <img src="doc/rbvogui_one_arm.png" height="275" />
 </p>
 
 You can play with the arm by using the rqt_joint_trajectory:
@@ -137,7 +137,7 @@ El robot se puede controlar de tres maneras:
 Cuando lanzamos RViZ a través de la simulación, el plugin se carga automáticamente. Lo encontramos en la esquina inferior izquierda de la pantalla de RViZ.
 
 <p align="center">
-  <img src="rbvogui_sim/doc/rviz_pad_teleop_plugin.png" height="250" />
+  <img src="doc/rviz_pad_teleop_plugin.png" height="250" />
 </p>
 
 ### 6.2 Teclado
@@ -193,7 +193,7 @@ roslaunch rbvogui_sim_bringup rbvogui_complete.launch robot_model:=rbvogui robot
 ```
 
 <p align="center">
-  <img src="rbvogui_sim/doc/rbvogui_navigation.png" height="400" />
+  <img src="doc/rbvogui_navigation.png" height="400" />
 </p>
 
 ### 7.2 Crea un mapa
@@ -207,7 +207,7 @@ roslaunch rbvogui_sim_bringup rbvogui_complete.launch robot_model:=rbvogui robot
 Mueve el robot usando el plugin del pad teleop de RViZ (por ejemplo):
 
 <p align="center">
-  <img src="rbvogui_sim/doc/rbvogui_mapping.png" height="400" />
+  <img src="doc/rbvogui_mapping.png" height="400" />
 </p>
 
 Cuando el mapa esté cargado, abre un terminal y accede al paquete ```rbvogui_localization```
