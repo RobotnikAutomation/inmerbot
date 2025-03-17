@@ -89,14 +89,14 @@ source devel/setup.bash
 
 Hay diferentes configuraciones disponibles:
 
-- Vogui con manipulador UR-10
+- Vogui con manipulador UR-5
 - Varios Voguis sin brazo
 
-### 5.1 RB-Vogui con manipulador UR10
+### 5.1 RB-Vogui con manipulador UR
 
 Para lanzar el rbvogui con el manipulador UR deberemos lanzar en terminal la siguiente llamada:
 ```bash
-  roslaunch rbvogui_sim_bringup rbvogui_complete.launch robot_model:=rbvogui robot_xacro:=rbvogui_std_ur10.urdf.xacro launch_arm:=true arm_manufacturer:=ur arm_model:=ur10
+  roslaunch rbvogui_sim_bringup rbvogui_complete.launch robot_model:=rbvogui robot_xacro:=rbvogui_std_ur5_rg2.urdf.xacro launch_arm:=true arm_manufacturer:=ur arm_model:=ur5
 ```
 
 <p align="center">
@@ -110,7 +110,7 @@ ROS_NAMESPACE=robot rosrun rqt_joint_trajectory_controller rqt_joint_trajectory_
 
 Or even use moveit to plan trajectories:
 ```bash
-ROS_NAMESPACE=robot roslaunch rbvogui_moveit_ur10 demo.launch
+ROS_NAMESPACE=robot roslaunch rbvogui_moveit_ur5 demo.launch
 ```
 
 <!-- 
