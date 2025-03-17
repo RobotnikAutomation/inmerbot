@@ -31,3 +31,6 @@
 [submodule "universal_robot"]
 	path = universal_robot
 	url = https://github.com/fmauch/universal_robot.git
+[submodule "rg2_gripper_common"]
+	path = rg2_gripper_common
+	url = https://github.com/RobotnikAutomation/rg2_gripper_common
